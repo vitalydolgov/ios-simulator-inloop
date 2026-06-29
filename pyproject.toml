@@ -1,0 +1,22 @@
+[project]
+name = "ios-simulator"
+version = "0.1.0"
+description = "iOS UI automation tools via Appium."
+requires-python = ">=3.13"
+dependencies = [
+    "inloop",
+    "Appium-Python-Client",
+    "xmltodict",
+]
+
+[project.entry-points."inloop.extensions"]
+ios-simulator = "ios_simulator:EXTENSION"
+
+[tool.uv.sources]
+inloop = { git = "https://github.com/vitalydolgov/inloop.git" }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
